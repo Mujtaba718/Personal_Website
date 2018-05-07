@@ -7,36 +7,33 @@
     <meta author="Mujtaba Iqbal" content="Website">
     <title>Mujtaba Iqbal Online Resume</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:300,400" rel="stylesheet">
 	<!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
     <!-- Scroll reveal -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
     <!-- Header -->
     <header>
     		<!-- Navbar -->
-	        <nav class="clearfix container">
-	        	<!-- Toggle button -->
-	        	<div class="toggle">
-	        		<i class="fas fa-bars menu"></i>
-	        	</div>
-	        	<div id="logo">
-	        		<img src="img/joe_shmoe.jpg" alt="">
+	        <div class="container clearfix">
+	        	<div class="header_logo">
+	        		<img src="assets/img/profile_pic_1.jpg">
 	        		<p>Mujtaba Iqbal</p>
 	        	</div>
-	            <ul>
-	                <li><a href="#education">Education</a></li>
-	                <li><a href="#skills">Skills</a></li>
-	                <li><a href="#experience">Work Experience</a></li>
-	                <li><a href="#contact_info">Contact</a></li>
-	            </ul>
-	        </nav>
+                <nav>
+                    <ul>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Work Experience</a></li>
+                        <li><a href="#contact_info">Contact</a></li>
+                    </ul>
+                </nav>
+	        </div>
     </header>
 
     <!-- Banner -->
@@ -44,12 +41,12 @@
     	<div class="container">
             <!-- Profile Picture -->
             <figure>
-                <img src="img/joe_shmoe.jpg" alt="my profile picture">
+                <img src="assets/img/profile_pic_1.jpg" alt="Mujtaba Iqbal profile picture">
                 <figcaption>MUJTABA IQBAL</figcaption>
             </figure>
             <!-- Summary -->
             <blockquote>
-                "Applied Math major with proven problem solving and analytical skills. Seeking a role building Web and mobile applications for a well-established company where I can develop &amp; maximize my abilities."
+                "College graduate with a passion for front-end web development. Eager to dive head first into new programming languages and frameworks."
             </blockquote>
             <a href="" download id="resume"><i class="fas fa-download"></i> DOWNLOAD CV</a>
         </div>
@@ -77,46 +74,46 @@
                     <h2>SKILLS</h2>
                 </div>
                 <!-- Progress -->
-                <ul class="column"> 
+                <div class="skills_column"> 
                     <div class="progress">
-                        <li>HTML</li>
+                        <div class="skill">HTML</div>
                         <div class="progress_bar html">
                         	<span></span>
                         </div>
                     </div>
                     <div class="progress">
-                        <li>CSS</li>
+                        <div class="skill">CSS</div>
                         <div class="progress_bar css">
                         	<span></span>
                         </div>
                     </div>
                     <div class="progress">
-                        <li>JavaScript</li>
+                        <div class="skill">JavaScript</div>
                         <div class="progress_bar js">
                         	<span></span>
                         </div>
                     </div>
-                </ul>
-                <ul class="column">
+                </div>
+                <div class="skills_column">
                     <div class="progress">
-                        <li>ReactJS</li>
-                        <div class="progress_bar react">
-                        	<span></span>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <li>Node.js</li>
-                        <div class="progress_bar node">
-                        	<span></span>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <li>JQuery</li>
+                        <div class="skill">JQuery</div>
                         <div class="progress_bar jquery">
                         	<span></span>
                         </div>
                     </div>
-                </ul>
+                    <div class="progress">
+                        <div class="skill">ReactJS</div>
+                        <div class="progress_bar react">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="skill">Node.js</div>
+                        <div class="progress_bar node">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -126,25 +123,89 @@
             <h2>WORK EXPERIENCE</h2>
         </div>
         <section>
-            <span>2014-2017</span>
-            <h2>Private Math Tutor</h2>
+            <span>January 1st, 2015 - Present</span>
+            <h2>Math Coach</h2>
             <ul>
-                <li>Provide one-on-one tutoring to students in courses ranging from algebra to pre-calculus.</li>
-                <li>Prepare daily lesson plans for activities.</li>
+                <li>Assist students with their daily homeworks and assignments.</li>
+                <li>Help students prepare for their SATs, ACTs, and college placement exams.</li>
                 <li>Help struggling students improve their critical thinking and problem-solving skills.</li>
                 <li>Evaluate student performance and provide feedback for improvement.</li>
             </ul>
         </section>
-        <section>
-            <span>2017-Present</span>
-            <h2>Freelance Web Developer</h2>
-            <ul>
-                <li>Designed, programmed, and deployed client’s websites using JavaScript, HTML, and CSS.</li>
-                <li>Identified and eliminated website bugs to improve user experience.</li>
-                <li>Performing maintenance and upgrades for existing websites</li>
-                <li>Completing all the projects within budget and timeline</li>
-            </ul>
-        </section>
+        
+        <!-- Projects  -->
+        <div id="projects">
+            <div class="title">
+                <i class="far fa-folder-open fa-5x"></i>
+                <h2>PROJECTS</h2>
+            </div>
+            <div class="my_projects clearfix">
+                <a href="https://mujtaba718.github.io/Travel-Site/">
+                    <img src="assets/img/projects/travel_site.JPG" alt="">
+                    <div class="project_description">
+                        <h3>Clear View Escapes</h3>
+                        <p>Mobile-First Travel Website made from HTML, CSS, and JavaScript</p>
+                    </div>
+                </a>
+                <a href="https://mujtaba718.github.io/Movie_App/">
+                    <img src="assets/img/projects/film_finder.JPG" alt="">
+                    <div class="project_description">
+                        <h3>Movie Finder</h3>
+                        <p>Web Application made from ReactJS to search for movies</p>
+                    </div>
+                </a>
+                <a href="https://mujtaba718.github.io/ReactJS_RSVP_App/">
+                    <img src="assets/img/projects/rsvp_site.JPG" alt="">
+                    <div class="project_description">
+                        <h3>RSVP</h3>
+                        <p>Web Application made from ReactJS to keep track of your guests</p>
+                    </div>
+                </a>
+                <a href="https://mujtaba718.github.io/Color_Game/">
+                    <img src="assets/img/projects/color_game.JPG" alt="">
+                    <div class="project_description">
+                        <h3>Color Game</h3>
+                        <p>Interactive and fun game made from JQuery</p>
+                    </div>
+                </a>
+                <a href="https://mujtaba718.github.io/Explore_California/">
+                    <img src="assets/img/projects/explore_cali.JPG" alt="">
+                    <div class="project_description">
+                        <h3>Explore California</h3>
+                        <p>Static home page of a tourist website</p>
+                    </div>
+                </a>
+                <a href="https://mujtaba718.github.io/Drum_kit_JS/">
+                    <img src="assets/img/projects/drum_kit.JPG" alt="">
+                    <div class="project_description">
+                        <h3>Drum Kit</h3>
+                        <p>Interactive Drum Kit made from JavaScript</p>
+                    </div>
+                </a>
+                <a href="https://mujtaba718.github.io/Advantage_Auto/">
+                    <img src="assets/img/projects/Advantage_auto.JPG" alt="">
+                    <div class="project_description">
+                        <h3>Advantage Auto</h3>
+                        <p>Static home page for a car sales website</p>
+                    </div>
+                </a>
+                <a href="https://mujtaba718.github.io/Aditii_Clothing_Website/">
+                    <img src="assets/img/projects/aditii.JPG" alt="">
+                    <div class="project_description">
+                        <h3>Aditii</h3>
+                        <p>Static home page for a clothing website</p>
+                    </div>
+                </a>
+                <a href="https://mujtaba718.github.io/The_Gym/">
+                    <img src="assets/img/projects/the_gym.JPG" alt="">
+                    <div class="project_description">
+                        <h3>The Gym</h3>
+                        <p>Home page for a fitness website</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
         <!-- Contact Me -->
         <div id="contact_info" class="title">
             <i class="fas fa-address-book fa-5x"></i>
@@ -152,7 +213,7 @@
         </div>
         <div class="container contact clearfix">
             <div class="contact_me">
-                <h2>"Please feel free to contact me anytime"</h2>
+                <h2>"Please feel free to contact me anytime."</h2>
             </div>
             <section>
                 <i class="fas fa-mobile-alt fa-3x"></i>
@@ -165,7 +226,7 @@
             <section>
                 <i class="fas fa-home fa-3x"></i>
                 <p>
-                    8532 143rd Street, Apt. 1C
+                    85-32 143rd Street, Apt. 1C
                     <br> Jamaica, New York
                 </p>
             </section>
@@ -189,15 +250,14 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <h1>Find me on:</h1>
-            <a arial-label="facebook" href="https://www.facebook.com/mujtaba.iqbal.plz.f.off" target="_blank"><i class="fab fa-facebook"></i></a>
+            <h1>Find me on:</h1>            
             <a arial-label="linkedin" href="https://www.linkedin.com/in/mujtaba-iqbal/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a arial-label="github" href="https://github.com/Mujtaba718" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </footer>
     <p>Protfolio of Mujtaba Iqbal</p>
 
-    <script src="js/app.js"></script>
+    <script src="temp/scripts/bundle.js"></script>
 </body>
 
 </html>
