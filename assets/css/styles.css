@@ -393,21 +393,29 @@ form input[type=submit]:hover {
 footer {
 	padding: 40px 0;
 	background-color: #202020;
+}
+
+.footer_one {
 	color: #fff;
 }
 
-footer h1 {
+.footer_one h1 {
 	font-weight: 300;
 }
 
-footer a {
+.footer_one a {
 	color: #fff;
-	font-size: 20px;
-	padding-right: 5px;
-	font-size: 1.5rem;
+	margin-right: 5px;
+	font-size: 2rem;
+	opacity: 0.6;
+	transition: opacity 0.3s ease-in;
 }
 
-footer + p {
+.footer_one a:hover {
+	opacity: 1;
+}
+
+.footer_two {
 	text-align: center;
 	background-color: #000;
 	color: #fff;
