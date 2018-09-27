@@ -23,4 +23,4 @@ class ShowLogo {
 	}
 }
 
-export default ShowLogo
+export default ShowLogo;

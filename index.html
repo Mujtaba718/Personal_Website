@@ -23,15 +23,15 @@
     <header>
     		<!-- Navbar -->
 	        <div class="container clearfix">
-	        	<div class="header_logo">
+	        	<a href="#" class="header_logo">
 	        		<img src="assets/img/profile_pic_1.jpg">
 	        		<p>Mujtaba Iqbal</p>
-	        	</div>
+	        	</a>
                 <nav>
                     <ul>
                         <li><a href="#education">Education</a></li>
                         <li><a href="#skills">Skills</a></li>
-                        <li><a href="#experience">Work Experience</a></li>
+                        <li><a href="#experience">Experience</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact_info">Contact</a></li>
                     </ul>
@@ -44,13 +44,13 @@
     	<div class="container">
             <!-- Profile Picture -->
             <figure>
-                <img src="assets/img/profile_pic_1.jpg" alt="Mujtaba Iqbal profile picture">
+                <img src="assets/img/profile_pic_1.jpg" alt="Mujtaba Iqbal's profile picture">
                 <figcaption>MUJTABA IQBAL</figcaption>
             </figure>
             <!-- Summary -->
-            <blockquote>
-                "College graduate with a passion for front-end web development. Eager to dive head first into new programming languages and frameworks. Willing and eager to move out of state for exciting opportunities."
-            </blockquote>
+            <p class="summary">
+                "Junior web developer focused on Front-End with skills in JavaScript, CSS3, HTML5 and more. Eager to dive head first into new programming languages and frameworks."
+            </p>
             <a href="assets/resume/Mujtaba_Iqbal_Resume.pdf" id="resume" download><i class="fas fa-download"></i> DOWNLOAD CV</a>
         </div>
     </div>
@@ -62,8 +62,8 @@
             <i class="fas fa-graduation-cap fa-5x"></i>
             <h2>EDUCATION</h2>
         </div>
-        <section>
-            <span>2012-2017</span>
+        <section class="container">
+            <span>August, 2012 - August, 2017</span>
             <h2>B.S., Applied Mathematics, The City College of New York</h2>
             <p><strong>Relevant Coursework:</strong> Calculus (I, II, III), Differential Equations, Discrete Mathematics, Probability Theory and Statistics, Linear Algebra, Physics (Mechanics, E&amp;M), Introduction to C++, Numerical Analysis, Applied Statistics, Discrete Models of Financial Mathematics, Introduction to Applied Mathematical Computation.</p>
         </section>
@@ -117,6 +117,7 @@
                         </div>
                     </div>
                 </div>
+                <p class="other-skills">Working knowledge in: Git, Bootstrap 3 &amp; 4, AngularJS, SASS</p>
             </div>
         </div>
         
@@ -125,17 +126,18 @@
             <i class="fas fa-briefcase fa-5x"></i>
             <h2>WORK EXPERIENCE</h2>
         </div>
-        <section>
-            <span>January 1st, 2018 - Present</span>
-            <h2>After-School Math tutor - Semper Fi Math &amp; Science LLC.</h2>
+        <section class="container">
+            <span>April 17th, 2018 - Present</span>
+            <h2>Private Math Tutor - Varsity Tutors&trade;</h2>
             <ul>
+                <li>Provide one-on-one tutoring to students in primary and secondary school math.</li>      
+                <li>Prepare daily lesson plans for activities.</li>   
                 <li>Assist students with their daily homeworks and assignments.</li>
-                <li>Help students prepare for their SATs, ACTs, and college placement exams.</li>                
                 <li>Evaluate student performance and provide feedback for improvement.</li>
             </ul>
         </section>
-        <section>
-            <span>August, 2013 - May, 2015</span>
+        <section class="container">
+            <span>September 4th, 2013 - May 21st, 2015</span>
             <h2>Computer Lab Assistant - The City College of New York</h2>
             <ul>
                 <li>Assisted students with using the computers and peripheral equipments (printer, scanner).</li>
@@ -155,30 +157,16 @@
                     <img src="assets/img/projects/travel_site.JPG" alt="travel site">
                     <div class="project_description">
                         <h3>Clear View Escapes</h3>
-                        <p>Mobile-First Travel Website made from HTML, CSS, and JavaScript</p>
+                        <p>Mobile-First Travel Website made from HTML5, CSS3, and JavaScript</p>
                     </div>
                 </a>
-                <a href="https://mujtaba718.github.io/Movie_App/">
-                    <img src="assets/img/projects/film_finder.JPG" alt="movie finder">
+                <a href="https://mujtaba718.github.io/Omnifood/">
+                    <img src="assets/img/projects/omnifood.JPG" alt="movie finder">
                     <div class="project_description">
-                        <h3>Movie Finder</h3>
-                        <p>Web Application made from ReactJS to search for movies</p>
+                        <h3>Omnifood</h3>
+                        <p>Beautiful Website made from HTML5, CSS3, and jQuery. Animation on scroll. Responsive and mobile-friendly.</p>
                     </div>
-                </a>
-                <a href="https://mujtaba718.github.io/ReactJS_RSVP_App/">
-                    <img src="assets/img/projects/rsvp_site.JPG" alt="rsvp app">
-                    <div class="project_description">
-                        <h3>RSVP</h3>
-                        <p>Web Application made from ReactJS to keep track of your guests</p>
-                    </div>
-                </a>
-                <a href="https://mujtaba718.github.io/Color_Game/">
-                    <img src="assets/img/projects/color_game.JPG" alt="color game">
-                    <div class="project_description">
-                        <h3>Color Game</h3>
-                        <p>Interactive RGB color guessing game made with vanilla JavaScript</p>
-                    </div>
-                </a>
+                </a>                
                 <a href="https://mujtaba718.github.io/Explore_California/">
                     <img src="assets/img/projects/explore_cali.JPG" alt="explore california">
                     <div class="project_description">
@@ -186,11 +174,11 @@
                         <p>Static home page of a tourist website</p>
                     </div>
                 </a>
-                <a href="https://mujtaba718.github.io/Drum_kit_JS/">
-                    <img src="assets/img/projects/drum_kit.JPG" alt="drum kit">
+                <a href="https://mujtaba718.github.io/Everyday_Things/">
+                    <img src="assets/img/projects/everyday_things.JPG" alt="drum kit">
                     <div class="project_description">
-                        <h3>Drum Kit</h3>
-                        <p>Interactive Drum Kit made from JavaScript</p>
+                        <h3>Everyday Things</h3>
+                        <p>Responsive Website with a drop-down menu and CSS3 animations</p>
                     </div>
                 </a>
                 <a href="https://mujtaba718.github.io/Advantage_Auto/">
@@ -206,14 +194,7 @@
                         <h3>Aditii</h3>
                         <p>Static home page for a clothing website</p>
                     </div>
-                </a>
-                <a href="https://mujtaba718.github.io/The_Gym/">
-                    <img src="assets/img/projects/the_gym.JPG" alt="the gym">
-                    <div class="project_description">
-                        <h3>The Gym</h3>
-                        <p>Home page for a fitness website</p>
-                    </div>
-                </a>
+                </a>                
             </div>
         </div>
 
@@ -226,21 +207,21 @@
             <div class="contact_me">
                 <h2>"Please feel free to contact me anytime."</h2>
             </div>
-            <section>
+            <div class="contact_info">
                 <i class="fas fa-mobile-alt fa-3x"></i>
                 <p>+718 450 1430</p>
-            </section>
-            <section>
+            </div>
+            <div class="contact_info">
                 <i class="fas fa-envelope-open fa-3x"></i>
                 <p>mujtaba.iq@gmail.com</p>
-            </section>
-            <section>
+            </div>
+            <div class="contact_info">
                 <i class="fas fa-home fa-3x"></i>
                 <p>
                     85-32 143rd Street, Apt. 1C
                     <br> Jamaica, New York
                 </p>
-            </section>
+            </div>
         </div>
 
         <!-- Form -->
@@ -260,17 +241,15 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer_one">
-                <h1>Find me on:</h1>            
-                <a arial-label="linkedin" href="https://www.linkedin.com/in/mujtaba-iqbal/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a arial-label="github" href="https://github.com/Mujtaba718" target="_blank"><i class="fab fa-github"></i></a>          
-            </div>
+        <div class="container footer_one">
+            <h1>Find me on:</h1>            
+            <a arial-label="linkedin" class="linkedin" href="https://www.linkedin.com/in/mujtaba-iqbal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a arial-label="github" href="https://github.com/Mujtaba718" target="_blank"><i class="fab fa-github"></i></a>          
+        </div>
+        <div class="footer_two">                
+            <p>Protfolio of Mujtaba Iqbal</p>
         </div>
     </footer>
-    <div class="footer_two">                
-        <p>Protfolio of Mujtaba Iqbal</p>
-    </div>
 
     <!-- build:js assets/scripts/bundle.js -->
     <script src="temp/scripts/bundle.js"></script>
