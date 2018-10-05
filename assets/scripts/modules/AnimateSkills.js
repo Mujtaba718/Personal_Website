@@ -17,9 +17,9 @@ class AnimateSkills {
 		    $(".html span").animate({ width: '80%' }, 2000)
 		    $(".css span").animate({ width: '60%' }, 2000)
 		    $(".js span").animate({ width: '50%' }, 2000)
-		    $(".react span").animate({ width: '40%' }, 2000)
-		    $(".jquery span").animate({ width: '50%' }, 2000)
-		    $(".node span").animate({ width: '30%' }, 2000)
+		    $(".react span").animate({ width: '55%' }, 2000)
+		    $(".jquery span").animate({ width: '70%' }, 2000)
+		    $(".node span").animate({ width: '40%' }, 2000)
 	    }
 	}
 }

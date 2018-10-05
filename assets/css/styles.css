@@ -111,6 +111,15 @@ nav ul li a:hover {
 	border-bottom: 2px solid #000;
 }
 
+	/*Mobile Icon*/
+	.menu_icon {
+		float: right;
+		cursor: pointer;
+		display: none;
+		font-size: 2em;
+		color: #fff;
+	}
+
 
 div#banner { 	
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banner2.jpg) no-repeat;
@@ -195,16 +204,16 @@ main > section h2 { margin-bottom: 10px; }
 
 main > section p { padding: 10px; }
 
-main > section ul {
-	padding-left: 25px;
-	padding: 0;
+main > section ul li { 
+	line-height: 30px; 
+	padding-left: 40px;
+	position: relative;
 }
-
-main > section ul li { line-height: 30px; }
 
 main > section ul li:before {
 	content: "\2713";
-	margin: 0 1em;
+	position: absolute;
+	left: 12px;
 }
 
 div#skills {
@@ -483,19 +492,10 @@ footer {
 		width: 90%;
 	}
 
-	/*header a.header_logo {
-		display: block;
-		width: 138px;
-		margin: 10px auto;
-		float: none;
-		text-align: center;
-	}*/
-
 	nav ul li a {
 		font-size: .95rem;
 	}
 	
-
 	div#banner figure img {
 		width: 150px;
 		height: 150px;
@@ -510,6 +510,7 @@ footer {
 		padding: 15px;
 		padding-top: 30px;
 	}
+
 
 	div.my_projects a img {
 		height: auto;
@@ -544,8 +545,77 @@ footer {
 	footer {
 		text-align: center;
 	}
+
 }
 
+@media screen and (max-width: 480px) {
+	body, html {
+		font-size: 0.92em;
+ 	}
+
+	nav ul {
+		float: left;
+		display: none;
+		width: 90%;
+	}
+
+	nav ul.active {
+		display: block;
+	}
+
+	nav ul li {
+		text-align: left;
+		float: none;
+		width: 100%;
+		padding-bottom: 0px;
+	}
+
+	main > section ul li:before {
+		margin-left: 0;
+	}
+
+	nav ul li:last-child {
+		padding-bottom: 10px;
+	}
+
+	nav .menu_icon {
+		display: inline-block;
+		float: right;
+	}
+
+	nav ul li a:link,
+	nav ul li a:visited {
+		display: block;
+		border-bottom: 0;
+	}
+	
+	header.fixed nav a {
+		padding: 10px 0;
+		border: 0;
+	}
+
+	header.fixed nav a:hover {
+		border: 0;
+	}
+
+	div#banner figure {
+		margin-top: 160px;
+	}
+
+	div.my_projects a {
+		width: 90%;
+		margin: 1em 5%;
+	}
+
+	div#skills div.skills_column {
+		width: 100%;
+	}
+
+	div.contact div.contact_info {
+		margin: 20px 0px;
+	}
+
+}	
 
 
 

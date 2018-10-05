@@ -4,6 +4,7 @@ class MobileMenu {
 	constructor(){
 		this.ul = $("nav ul");
 		this.menuIcon = $(".menu_icon");
+		this.icon = $(".menu_icon i");
 		this.toggleEvent();
 	}
 
@@ -12,7 +13,8 @@ class MobileMenu {
 	}
 
 	toggleMenu() {
-		this.ul.toggleClass('active');
+		this.ul.slideToggle(200);
+		this.icon.toggleClass("fa-times");
 	}
 }
 

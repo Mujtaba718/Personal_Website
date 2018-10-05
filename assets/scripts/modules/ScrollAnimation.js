@@ -11,7 +11,7 @@ class ScrollAnimation {
 	        distance: '100px',
 	    })
 
-	    sr.reveal('.contact section', {
+	    sr.reveal('.contact_info', {
 	        duration: 2000,
 	        origin: 'bottom',
 	        distance: '500px',
