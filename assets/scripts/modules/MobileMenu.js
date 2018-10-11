@@ -3,8 +3,7 @@ import $ from 'jquery';
 class MobileMenu {
 	constructor(){
 		this.ul = $("nav ul");
-		this.menuIcon = $(".menu_icon");
-		this.icon = $(".menu_icon i");
+		this.menuIcon = $("#menu_icon");
 		this.toggleEvent();
 	}
 
@@ -14,7 +13,7 @@ class MobileMenu {
 
 	toggleMenu() {
 		this.ul.slideToggle(200);
-		this.icon.toggleClass("fa-times");
+		this.menuIcon.toggleClass("open");
 	}
 }
 

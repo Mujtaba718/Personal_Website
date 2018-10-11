@@ -11937,8 +11937,7 @@ var MobileMenu = function () {
 		_classCallCheck(this, MobileMenu);
 
 		this.ul = (0, _jquery2.default)("nav ul");
-		this.menuIcon = (0, _jquery2.default)(".menu_icon");
-		this.icon = (0, _jquery2.default)(".menu_icon i");
+		this.menuIcon = (0, _jquery2.default)("#menu_icon");
 		this.toggleEvent();
 	}
 
@@ -11951,7 +11950,7 @@ var MobileMenu = function () {
 		key: "toggleMenu",
 		value: function toggleMenu() {
 			this.ul.slideToggle(200);
-			this.icon.toggleClass("fa-times");
+			this.menuIcon.toggleClass("open");
 		}
 	}]);
 

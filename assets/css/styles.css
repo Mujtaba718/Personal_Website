@@ -42,7 +42,7 @@ header {
 	z-index: 100;
 	width: 100%;
 	padding: 40px 0px;
-	transition: all 0.4s ease-out;
+	transition: all 0.3s ease-out;
 }
 	/****** Fixed Header *********/
 	header.fixed {
@@ -96,9 +96,9 @@ nav ul li {
 	margin-left: 30px;
 }
 
-nav ul li a {
+nav ul a {
 	display: block;
-	padding: 5px 0px;
+	padding: 8px 0px;
 	text-transform: uppercase;
 	border-bottom: 2px solid transparent;
 	color: #fff;
@@ -107,17 +107,53 @@ nav ul li a {
 	transition: border-bottom 0.4s;
 }
 
-nav ul li a:hover {
+nav ul a:hover {
 	border-bottom: 2px solid #000;
 }
 
 	/*Mobile Icon*/
-	.menu_icon {
+	/*.menu_icon {
 		float: right;
 		cursor: pointer;
 		display: none;
 		font-size: 2em;
 		color: #fff;
+	}*/
+
+	nav #menu_icon {
+		display: none;
+		float: right;
+		cursor: pointer;
+		width: 25px;
+	}
+
+	nav #menu_icon div {
+		height: 4px;
+		background-color: #fff;
+		margin-bottom: 5px;
+		position: relative;
+		top: 0;
+		transition: all 0.4s;
+	}
+
+	nav #menu_icon div:last-child {
+		margin-bottom: 0;
+	}
+
+	nav #menu_icon.open div:nth-child(2) {
+		width: 0;
+		opacity: 0;
+		transform-origin: center;
+	}
+
+	nav #menu_icon.open div:nth-child(1) {
+		transform: rotate(-45deg);
+		top: 9px;
+	}
+
+	nav #menu_icon.open div:nth-child(3) {
+		transform: rotate(45deg);
+		top: -9px;
 	}
 
 
@@ -458,23 +494,22 @@ footer {
 	nav ul {
 		clear: left;
 		float: none;
-		width: 100%; 
+		/*width: 100%; */
 	}
 
 	nav ul li {
 		width: 20%;
 		text-align: center;
 		margin: 0;
-		padding: 10px 0px;
+		/*padding: 10px 0px;*/
 	}
 
-	nav ul a:hover {
+	nav ul a, 
+	nav ul a:hover,
+	header.fixed nav ul a:hover {
 		border: none;
 	}
 
-	nav ul li a {
-		display: inline;
-	}
 
 	div.my_projects a {
 		width: 47%;
@@ -492,8 +527,13 @@ footer {
 		width: 90%;
 	}
 
-	nav ul li a {
+	nav ul a {
 		font-size: .95rem;
+	}
+
+	nav ul a, 
+	nav ul a:hover {
+		border: none;
 	}
 	
 	div#banner figure img {
@@ -501,9 +541,9 @@ footer {
 		height: 150px;
 	}
 
-	div#banner .summary {
+	div#banner p.summary {
 		font-size: 1.1em;
-		margin: 30px 0px;
+		margin: 45px 0;
 	}
 
 	main > section.container {
@@ -573,34 +613,47 @@ footer {
 	main > section ul li:before {
 		margin-left: 0;
 	}
-
+/*
 	nav ul li:last-child {
 		padding-bottom: 10px;
+	}*/
+
+	nav #menu_icon {
+		display: block;
 	}
 
-	nav .menu_icon {
-		display: inline-block;
-		float: right;
-	}
-
-	nav ul li a:link,
-	nav ul li a:visited {
+	nav ul a:link,
+	nav ul a:visited {
 		display: block;
 		border-bottom: 0;
 	}
 	
 	header.fixed nav a {
-		padding: 10px 0;
+		padding-top: 20px;
+		padding-bottom: 0px;
 		border: 0;
+	}
+
+	header.fixed nav li:last-child a {
+		padding-bottom: 20px;
 	}
 
 	header.fixed nav a:hover {
 		border: 0;
 	}
 
+	header.fixed nav #menu_icon {
+		padding: 20px 0px;
+	}
+
+	header.fixed nav #menu_icon div {
+		background-color: #000;
+	}
+
 	div#banner figure {
 		margin-top: 160px;
 	}
+
 
 	div.my_projects a {
 		width: 90%;
