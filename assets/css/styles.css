@@ -6,7 +6,7 @@ html, body {
 	overflow: auto;
 }
 
-*, *:before, *:after{
+*, *::before, *::after{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -21,7 +21,7 @@ html, body {
 .container {
 	width: 80%;
 	max-width: 1100px;
-	margin: 0px auto;
+	margin: 0 auto;
 	overflow: hidden;
 } 
 
@@ -37,20 +37,20 @@ header {
 	left: 0;
 	z-index: 1;
 	width: 100%;
-	padding: 40px 0px;
+	padding: 40px 0;
 	transition: all 0.3s ease-out;
 }
 	/****** Fixed Header *********/
 
 	header.fixed {
 	    background: #fff;
-	    box-shadow: 0px 1px 5px #999;
-	    padding: 0px;
+	    box-shadow: 0 1px 5px #999;
+	    padding: 0;
 	}
 
 	header.fixed nav a {
 	    color: #000;
-	    padding: 20px 0px;
+	    padding: 20px 0;
 	    transition: border-bottom 0.3s;
 	}
 
@@ -58,27 +58,27 @@ header {
 		border-bottom: 2px solid #000;
 	}
 
-header a.header_logo {
+header .header_logo {
 	opacity: 0;
 	color: #000;
 	text-decoration: none;
 	float: left;
 	transition: opacity 0.3s;
-	margin-top: 15px;
+	margin-top: 0.8em;
 }
 
-header a.header_logo_show {
+header .header_logo_show {
 	opacity: 1;
 }
 
-header a.header_logo img {
+header .header_logo img {
 	height: 40px;
 	width: 40px;
 	border-radius: 20px;
 	vertical-align: middle;
 }
 
-header a.header_logo span {
+header .header_logo span {
 	margin-left: 5px;
 	font-family: 'Lobster', cursive;
 }
@@ -96,8 +96,9 @@ nav ul li {
 
 nav ul a {
 	display: block;
-	padding: 8px 0px;
+	padding: 8px 0;
 	text-transform: uppercase;
+	letter-spacing: 1px;
 	border-bottom: 2px solid transparent;
 	color: #fff;
 	font-size: .97rem;
@@ -118,7 +119,7 @@ nav ul a:hover {
 		width: 25px;
 	}
 
-	nav #menu_icon div {
+	nav #menu_icon > div {
 		height: 4px;
 		background-color: #fff;
 		margin-bottom: 5px;
@@ -131,24 +132,26 @@ nav ul a:hover {
 		margin-bottom: 0;
 	}
 
+	nav #menu_icon.open div:nth-child(1) {
+		transform: rotate(-45deg);
+		top: 9px;
+	}
+
 	nav #menu_icon.open div:nth-child(2) {
 		width: 0;
 		opacity: 0;
 		transform-origin: center;
 	}
 
-	nav #menu_icon.open div:nth-child(1) {
-		transform: rotate(-45deg);
-		top: 9px;
-	}
 
 	nav #menu_icon.open div:nth-child(3) {
 		transform: rotate(45deg);
 		top: -9px;
 	}
 
+/****** BANNER *********/
 
-div#banner { 	
+#banner { 	
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banner.jpg) no-repeat;
 	background-size: cover;
     background-attachment: fixed;
@@ -158,26 +161,26 @@ div#banner {
 	font-family: "Raleway", sans-serif;
 }
 
-div#banner figure {
+figure {
 	margin-top: 180px;
 	color: #fff;
 	font-size: 1.33em;
 }
 
-div#banner figure img {
+figure img {
 	height: 175px;
 	width: 175px;
 	border: 3px solid #fff;
 	border-radius: 50%;
 }
 
-div#banner p.summary {
+p.summary {
 	font-size: 1.20em;
-	margin: 45px 0px;
+	margin: 45px 0;
 	color: #fff;
 } 
 
-div#banner a#resume {
+#resume {
 	display: inline-block;
 	color: #fff;
 	padding: 15px 20px;
@@ -186,19 +189,19 @@ div#banner a#resume {
 	transition: background 0.4s;
 }
 
-div#banner a#resume:hover {
+#resume:hover {
 	background-color: #fff;
 	color: #000;
 }
 
-div#banner a#resume i {
+#resume i {
 	margin-right: 5px;
 }
 
 
 /****** Main *********/
 div.title {
-	padding: 40px 0px;
+	padding: 40px 0;
 	text-align: center;
 	background-color: #F5F5F5;
 }
@@ -208,7 +211,8 @@ div.title h2{
 	font-weight: 400;
 }
 
-main > section.container {
+main .experience, 
+main .education {
 	overflow: visible;
 	margin: 50px auto 40px;
 	border: 1px solid #ddd;
@@ -216,13 +220,25 @@ main > section.container {
 	padding: 30px;
 }
 
-main > section span {
+.date {
 	border: 1px solid #ddd;
 	position: absolute;
 	top: -12px;
 	left: 25px;
 	background-color: #fff;
-	padding: 0px 10px;
+	padding: 0 10px;
+}
+
+.location {
+	float: right;
+	font-size: .9em;
+	font-style: italic;
+	color: rgba(0,0,0,0.9);
+	margin-top: 12px;
+}
+
+.location::before {
+	content: ".....";
 }
 
 main > section h2 { margin-bottom: 10px; }
@@ -241,57 +257,55 @@ main > section ul li:before {
 	left: 12px;
 }
 
-div#skills {
+#skills {
 	background-color: #000;
 	color: #fff;
 }
 
-div#skills div.skills_title {
-	padding: 30px 0px;
+#skills div.skills_title {
+	padding: 30px 0;
 	text-align: center;
 }
 
-div#skills div.skills_title h2 {
+#skills div.skills_title h2 {
 	font-weight: 300;	
 }
 
-div#skills div.skills_column {
-  width: 50%;
-  float: left;
+#skills div.skills_column {
+    width: 50%;
+    float: left;
 }
 
-div#skills div.skills_column div.progress {
+#skills div.progress {
 	margin-bottom: 30px;
 }
 
-div#skills div.skills_column div.progress div.skill {
-  text-align: center;
-  display: inline-block;
-  width: 19%;
-  vertical-align: top;
+#skills div.skill {
+    text-align: center;
+    display: inline-block;
+    width: 19%;
+    vertical-align: top;
 }
 
-div#skills div.skills_column div.progress_bar {
-  display: inline-block;
-  /*height: 15px;*/
-  border: 2px solid #fff;	
-  width: 80%;
-  /*box-shadow: inset 0px 0px 3px #d0d0d0;*/
+#skills div.skills_column div.progress_bar {
+    display: inline-block;
+    border: 2px solid #fff;	
+    width: 80%;
 }
 
-div#skills div.skills_column div.progress_bar span {
+#skills div.skills_column div.progress_bar span {
 	height: 10px;
 	display: block;
 	background-color: #fff;
 }
 
-div#skills .other-skills {
+#skills .other-skills {
 	margin: 30px 0 10px;
 	text-align: center;
 }
 
 div.my_projects {
-	margin: 40px 0px;
+	margin: 40px 0;
 }
 
 div.my_projects a {
@@ -341,31 +355,25 @@ div.contact div.contact_info {
 	text-align: center;
 	float: left;
 	width: 30%;
-	margin: 70px 1.5%;
+	margin: 40px 1.5%;
 }
 
-div.contact div.contact_me {
+div.contact h2 {
 	text-align: center;
-}
-
-div.contact h2{
-	display: inline-block;
 	margin-top: 40px;
 	position: relative;
-	padding-bottom: 20px;
 	font-weight: 300;
 }
 
 div.contact h2:after {
 	display: block;
-	content: " ";
+	content: "";
 	width: 70px;
-	margin: 0 auto; 
-	margin-top: 20px;
+	margin: 30px auto 0; 
 	border-bottom: 3px solid #000;
 }
 
-div.contact div.contact_info p {
+div.contact_info p {
 	margin-top: 10px;
 }
 
@@ -548,7 +556,7 @@ footer {
 	div.contact div.contact_info{
 		width: 100%;
 		text-align: center;
-		margin: 0px 0px 30px 0px;
+		margin: 0 0 30px 0;
 	}
 
 	div.contact section:first-of-type {
@@ -596,7 +604,7 @@ footer {
 		text-align: left;
 		float: none;
 		width: 100%;
-		padding-bottom: 0px;
+		padding-bottom: 0;
 	}
 
 	main > section ul li:before {
@@ -628,7 +636,7 @@ footer {
 	}
 
 	header.fixed nav #menu_icon {
-		padding: 20px 0px;
+		padding: 20px 0;
 	}
 
 	header.fixed nav #menu_icon div {
@@ -655,7 +663,7 @@ footer {
 	}
 
 	div.contact div.contact_info {
-		margin: 20px 0px;
+		margin: 20px 0;
 	}
 
 }	
