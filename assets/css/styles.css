@@ -4,6 +4,7 @@ html, body {
 	font: 16px/1.5 "Roboto", "Arial", sans-serif;
 	font-weight: 300;
 	overflow: auto;
+	color: #323233;
 }
 
 *, *::before, *::after{
@@ -27,6 +28,9 @@ html, body {
 
 ul { list-style: none; }
 a { text-decoration: none; }
+h2 {
+	color: #252526;
+}
 
 
 /****** HEADER *********/
@@ -96,18 +100,31 @@ nav ul li {
 
 nav ul a {
 	display: block;
+	position: relative;
 	padding: 8px 0;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	border-bottom: 2px solid transparent;
 	color: #fff;
 	font-size: .97rem;
 	font-weight: 300;
-	transition: border-bottom 0.4s;
+	border-bottom: 2px solid transparent;
 }
 
-nav ul a:hover {
-	border-bottom: 2px solid #fff;
+nav ul a::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	bottom: 0;
+	left: 0;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease-in;
+}
+
+nav ul a:hover::after {
+	transform: scaleX(1);
 }
 
 	/******* Menu Button *******/
@@ -152,7 +169,7 @@ nav ul a:hover {
 /****** BANNER *********/
 
 #banner { 	
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banner.jpg) no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/banner.jpg) no-repeat;
 	background-size: cover;
     background-attachment: fixed;
     background-position: 0 -100px;
@@ -162,7 +179,7 @@ nav ul a:hover {
 }
 
 figure {
-	margin-top: 180px;
+	margin-top: 150px;
 	color: #fff;
 	font-size: 1.33em;
 }
@@ -175,8 +192,8 @@ figure img {
 }
 
 p.summary {
-	font-size: 1.20em;
-	margin: 45px 0;
+	font-size: 1.125em;
+	margin: 45px 100px;
 	color: #fff;
 } 
 
@@ -220,6 +237,15 @@ main .education {
 	padding: 30px;
 }
 
+.experience h2 {
+	float: left;
+	font-weight: 400; 
+}
+
+.experience ul {
+	clear: left;
+}
+
 .date {
 	border: 1px solid #ddd;
 	position: absolute;
@@ -231,10 +257,11 @@ main .education {
 
 .location {
 	float: right;
+	text-align: right;
 	font-size: .9em;
 	font-style: italic;
 	color: rgba(0,0,0,0.9);
-	margin-top: 12px;
+	/*margin-top: 12px;*/
 }
 
 .location::before {
@@ -268,7 +295,8 @@ main > section ul li:before {
 }
 
 #skills div.skills_title h2 {
-	font-weight: 300;	
+	font-weight: 300;
+	color: #fff;	
 }
 
 #skills div.skills_column {
@@ -287,13 +315,13 @@ main > section ul li:before {
     vertical-align: top;
 }
 
-#skills div.skills_column div.progress_bar {
+#skills div.progress_bar {
     display: inline-block;
     border: 2px solid #fff;	
     width: 80%;
 }
 
-#skills div.skills_column div.progress_bar span {
+#skills div.progress_bar span {
 	height: 10px;
 	display: block;
 	background-color: #fff;
@@ -308,47 +336,61 @@ div.my_projects {
 	margin: 40px 0;
 }
 
-div.my_projects a {
+.project {
 	display: block;
 	width: 30%;
 	margin: 1.66%;
 	float: left;
-	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
 	position: relative;
-	backface-visibility: hidden;
+	overflow: hidden;
 }	
 
-div.my_projects a img {
+.project img {
 	display: block;
 	width: 100%;
 	height: auto;
-	opacity: 1;
+	transition: transform 0.5s ease;	
 }
 
-div.my_projects div.project_description {
-  	opacity: 0;
-	color: #000;
-	transition: opacity 0.5s ease;
-  	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
+.project .project_description {
+  	display: flex;
+  	align-content: center;
+  	flex-wrap: wrap;
+	color: #fff;
   	text-align: center;
   	font-weight: 400;
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	transform: translateX(-100%);
+  	background-color: rgba(0,0,0,0.9);
+	transition: transform 0.5s ease;
 }
 
-div.my_projects div.project_description h3 {
+.project .project_description * {
+	flex: 1 1 50%;
+}
+
+.project .project_description h3 {
+	flex-basis: 100%;
 	font-weight: 700;
-  	margin-bottom: 0.5em;
+  	margin-bottom: 1.25em;
   	text-transform: uppercase;
 }
 
-div.my_projects a:hover img {
-	opacity: 0.3;
+.project_description a {
+	color: #fff;
 }
 
-div.my_projects a:hover div.project_description {
-	opacity: 1;
+.project:hover img {
+	transform: translateX(100%);
+}
+
+.project:hover .project_description {
+	transform: translateX(0%);
 }
 
 div.contact div.contact_info {
@@ -365,15 +407,21 @@ div.contact h2 {
 	font-weight: 300;
 }
 
-div.contact h2:after {
+div.contact_me h2::after {
 	display: block;
 	content: "";
 	width: 70px;
-	margin: 30px auto 0; 
+	margin: 15px auto 0; 
 	border-bottom: 3px solid #000;
 }
 
 div.contact_info p {
+	margin-top: 10px;
+}
+
+div.contact_info a {
+	color: inherit;
+	display: block;
 	margin-top: 10px;
 }
 
@@ -585,7 +633,7 @@ footer {
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 554px) {
 	body, html {
 		font-size: 0.92em;
  	}
@@ -643,22 +691,38 @@ footer {
 		background-color: #000;
 	}
 
-	div#banner figure {
-		margin-top: 150px;
+	#banner figure {
+		margin-top: 120px;
 	}
 
-	div#banner figure img {
+	#banner figure img {
 		width: 125px;
 		height: 125px;
 	}
 
+	#banner p.summary {
+		font-size: 1em;
+		margin: 45px 0;
+	}
+
+	.experience .location {
+		clear: both;
+	}
 
 	div.my_projects a {
 		width: 90%;
 		margin: 1em 5%;
 	}
 
-	div#skills div.skills_column {
+	#skills div.skills_column {
+		width: 100%;
+	}
+
+	#skills div.skill {
+		text-align: left;
+	}
+
+	#skills div.progress_bar {
 		width: 100%;
 	}
 

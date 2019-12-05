@@ -30,3 +30,5 @@ gulp.task('usemin', ['deleteDocsFolder'], () =>
 );
 
 gulp.task('build', ['deleteDocsFolder', 'imageMin', 'usemin']); 
+
+
