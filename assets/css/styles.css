@@ -344,6 +344,7 @@ main > section ul li:before {
 	box-shadow: 0 0 10px rgba(0,0,0,0.4);
 	position: relative;
 	overflow: hidden;
+	cursor: pointer;
 }	
 
 .project img {
@@ -557,6 +558,11 @@ footer {
 		width: 0;
 	}
 
+	div#banner p.summary {
+		font-size: 1.1em;
+		margin: 45px 0;
+	}
+	
 	.project {
 		width: 47%;
 		margin: 1.5%;
@@ -587,10 +593,6 @@ footer {
 		height: 150px;
 	}
 
-	div#banner p.summary {
-		font-size: 1.1em;
-		margin: 45px 0;
-	}
 
 	main > section.container {
 		padding: 15px;
@@ -602,14 +604,11 @@ footer {
 		height: auto;
 	}
 
-	div.contact div.contact_info{
+	div.contact div.contact_info {
+		float: none;
 		width: 100%;
 		text-align: center;
-		margin: 0 0 30px 0;
-	}
-
-	div.contact section:first-of-type {
-		margin-top: 30px;
+		margin: 30px 0px;
 	}
 
 	form div.input_container {
